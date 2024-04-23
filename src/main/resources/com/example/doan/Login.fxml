@@ -6,24 +6,31 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doan.Login">
    <children>
-      <AnchorPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: bb1a3a;">
          <children>
-            <Button fx:id="lo_loginBtn" layoutX="274.0" layoutY="226.0" mnemonicParsing="false" onAction="#signin" text="Button" />
-            <TextField fx:id="lo_username" layoutX="217.0" layoutY="113.0" onAction="#signin" />
-            <PasswordField fx:id="lo_password" layoutX="218.0" layoutY="167.0" onAction="#signin" />
-            <Hyperlink fx:id="lo_create" layoutX="230.0" layoutY="285.0" onAction="#switchForm" text="Create a new account" />
+            <Button fx:id="lo_loginBtn" layoutX="274.0" layoutY="226.0" mnemonicParsing="false" onAction="#signin" prefHeight="34.0" prefWidth="77.0" text="Sign in" />
+            <TextField fx:id="lo_username" layoutX="217.0" layoutY="113.0" onAction="#signin" prefHeight="41.0" prefWidth="184.0" promptText="username" />
+            <PasswordField fx:id="lo_password" layoutX="218.0" layoutY="167.0" onAction="#signin" prefHeight="42.0" prefWidth="184.0" promptText="password" />
+            <Hyperlink fx:id="lo_create" layoutX="221.0" layoutY="288.0" onAction="#switchForm" prefHeight="35.0" prefWidth="184.0" text="Create a new account">
+               <font>
+                  <Font size="18.0" />
+               </font></Hyperlink>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="register_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="register_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: bb1a3a;" visible="false">
          <children>
-            <TextField fx:id="re_email" layoutX="217.0" layoutY="61.0" />
-            <Button fx:id="re_registerBtn" layoutX="274.0" layoutY="226.0" mnemonicParsing="false" onAction="#singup" text="Button" />
-            <TextField fx:id="re_username" layoutX="217.0" layoutY="113.0" />
-            <PasswordField fx:id="re_password" layoutX="218.0" layoutY="167.0" />
-            <Hyperlink fx:id="re_already" layoutX="233.0" layoutY="286.0" onAction="#switchForm" prefHeight="24.0" prefWidth="122.0" text="Already have an account" />
+            <TextField fx:id="re_email" layoutX="217.0" layoutY="61.0" prefHeight="42.0" prefWidth="171.0" promptText="email" />
+            <Button fx:id="re_registerBtn" layoutX="268.0" layoutY="226.0" mnemonicParsing="false" onAction="#singup" prefHeight="34.0" prefWidth="70.0" text="Sign up" />
+            <TextField fx:id="re_username" layoutX="217.0" layoutY="113.0" prefHeight="42.0" prefWidth="171.0" promptText="username" />
+            <PasswordField fx:id="re_password" layoutX="218.0" layoutY="167.0" prefHeight="42.0" prefWidth="171.0" promptText="password" />
+            <Hyperlink fx:id="re_already" layoutX="209.0" layoutY="286.0" onAction="#switchForm" prefHeight="34.0" prefWidth="195.0" text="Already have an account">
+               <font>
+                  <Font size="17.0" />
+               </font></Hyperlink>
          </children>
       </AnchorPane>
    </children>
